@@ -6,7 +6,7 @@
     <description>Recent content on XD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Aug 2019 01:37:56 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2020 15:25:53 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,12 +23,12 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title>[中文] 《长恨歌》</title>
-      <link>http://localhost:1313/post/first/</link>
-      <pubDate>Fri, 30 Aug 2019 01:37:56 +0800</pubDate>
+      <title>Ubuntu 环境下用 Hugo &#43; Github 搭建个人博客</title>
+      <link>http://localhost:1313/post/how-to-build-blog/</link>
+      <pubDate>Mon, 17 Feb 2020 15:25:53 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/first/</guid>
-      <description>XDXD</description>
+      <guid>http://localhost:1313/post/how-to-build-blog/</guid>
+      <description>你需要 Github 账号 Git 环境 第1步：安装 Hugo 下载 Hugo https://github.com/gohugoio/hugo/releases Hugo 版本不要选择太低的，我之前已经下载了一个 0.3 版本的，下载好主题，运行的时候提示该主题要求 Hugo 不低于 0.</description>
     </item>
     
   </channel>

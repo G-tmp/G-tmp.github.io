@@ -6,17 +6,17 @@
     <description>Recent content in Tags on XD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Aug 2019 01:37:56 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2020 15:25:53 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>preview</title>
-      <link>http://localhost:1313/tags/preview/</link>
-      <pubDate>Fri, 30 Aug 2019 01:37:56 +0800</pubDate>
+      <title>build</title>
+      <link>http://localhost:1313/tags/build/</link>
+      <pubDate>Mon, 17 Feb 2020 15:25:53 +0800</pubDate>
       
-      <guid>http://localhost:1313/tags/preview/</guid>
+      <guid>http://localhost:1313/tags/build/</guid>
       <description></description>
     </item>
     
