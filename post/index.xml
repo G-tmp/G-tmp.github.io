@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Ubuntu 环境下用 Hugo &#43; Github 搭建个人博客</title>
+      <title>Ubuntu 用 Hugo &#43; Github 搭建个人博客</title>
       <link>http://localhost:1313/post/how-to-build-blog/</link>
       <pubDate>Mon, 17 Feb 2020 15:25:53 +0800</pubDate>
       
       <guid>http://localhost:1313/post/how-to-build-blog/</guid>
-      <description>你需要 Github 账号 Git 环境 第1步：安装 Hugo 下载 Hugo https://github.com/gohugoio/hugo/releases Hugo 版本不要选择太低的，我之前已经下载了一个 0.3 版本的，下载好主题，运行的时候提示该主题要求 Hugo 不低于 0.</description>
+      <description>首先你需要 Github 账号 Git 环境 第1步：安装 Hugo Hugo 版本不要选择太低的，我之前已经下载了一个 0.3 版本的，下载好主题，运行的时候提示该主题要求 Hugo 不低于 0.5 。 卸载</description>
     </item>
     
   </channel>
