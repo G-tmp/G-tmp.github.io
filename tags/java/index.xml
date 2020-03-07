@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on XD</title>
-    <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on XD</description>
+    <title>java on XD</title>
+    <link>http://localhost:1313/tags/java/</link>
+    <description>Recent content in java on XD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 07 Mar 2020 17:43:19 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>http://localhost:1313/post/ubuntu-install-maven/</guid>
       <description>首先你需要 JDK 环境变量 安装 maven 以下两种方式可选 apt 安装 1 2 sudo apt update sudo apt install maven 不需要配置环境，执行 mvn -version ，显示版本信息的话就是安装成功 maven 官网下载安装 maven 官方</description>
-    </item>
-    
-    <item>
-      <title>Ubuntu 用 Hugo &#43; Github 搭建个人博客</title>
-      <link>http://localhost:1313/post/build-blog/</link>
-      <pubDate>Mon, 17 Feb 2020 15:25:53 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/build-blog/</guid>
-      <description>首先你需要 Github 账号 Git 环境 第1步：安装 Hugo Hugo 版本不要选择太低的，我之前已经下载了一个 0.3 版本的，下载好主题，运行的时候提示该主题要求 Hugo 不低于 0.5 。 卸载</description>
     </item>
     
   </channel>
