@@ -43,12 +43,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/build-blog/" />
 <meta property="article:published_time" content="2020-02-17T15:25:53+08:00" />
-<meta property="article:modified_time" content="2020-03-06T15:25:53+08:00" />
+<meta property="article:modified_time" content="2020-08-16T22:25:53+08:00" />
 <meta itemprop="name" content="Ubuntu 用 Hugo &#43; Github 搭建个人博客">
 <meta itemprop="description" content="首先你需要 Github 账号 Git 环境 第1步：安装 Hugo Hugo 版本不要选择太低的，我之前已经下载了一个 0.3 版本的，下载好主题，运行的时候提示该主题要求 Hugo 不低于 0.5 。 卸载">
 <meta itemprop="datePublished" content="2020-02-17T15:25:53&#43;08:00" />
-<meta itemprop="dateModified" content="2020-03-06T15:25:53&#43;08:00" />
-<meta itemprop="wordCount" content="689">
+<meta itemprop="dateModified" content="2020-08-16T22:25:53&#43;08:00" />
+<meta itemprop="wordCount" content="748">
 
 
 
@@ -140,6 +140,7 @@
     <li><a href="#第2步创建-hugo-项目">第2步：创建 Hugo 项目</a></li>
     <li><a href="#第3步选择一个-hugo-主题">第3步：选择一个 Hugo 主题</a></li>
     <li><a href="#第4步部署到-github">第4步：部署到 Github</a></li>
+    <li><a href="#第5步更新">第5步：更新</a></li>
     <li><a href="#参考">参考</a></li>
   </ul>
 </nav>
@@ -238,7 +239,7 @@ hugo server
 <p>你可以在 <em><strong>Blog</strong></em> 目录下执行 <em><strong>hugo new post/XD.md</strong></em> ， 这个命令会在 Blog/content/post 下生成附带Markdown格式的markdown文本，touch 只是创建一个白板</p>
 <h2 id="第4步部署到-github"><strong>第4步：部署到 Github</strong></h2>
 <p>登陆 Github，点击 New repository ，在 Repository name 这一栏输入 <em><strong>&lt;你的 Github 用户名&gt;.github.io</strong></em> ，点击 Create repository</p>
-<p>打包：</p>
+<p>编译打包：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -266,17 +267,45 @@ git init
 git remote add origin https://github.com/&lt;Github 用户名&gt;/&lt;Github 用户名&gt;.github.io.git
 git add .		#有个点号
 git commit -m &#34;XD&#34;
-git push -u origin master
+git push
 </code></pre></td></tr></table>
 </div>
 </div><p>推送到Github 后过一会就能访问拉 ， <em><strong>&lt;你的 Github 用户名&gt;.github.io</strong></em></p>
-<h2 id="参考"><strong>参考</strong></h2>
+<h2 id="第5步更新"><strong>第5步：更新</strong></h2>
+<p>之后添加文章，只需要重新编译 Hugo，重新提交到 Github 即可。</p>
+<p><strong>编译</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd Blog
+hugo
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>提交</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd public
+git add . 
+git commit -m &#34;XD&#34;
+git push
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="参考"><strong>参考</strong></h2>
 <ul>
 <li>
 <p><a href="https://juejin.im/post/5cc41bfef265da036505031c#heading-3">Hugo + Github Pages 搭建个人博客</a></p>
 </li>
 <li>
-<p><a href="https://blog.olowolo.com/post/hugo-quick-start/">主题作者的个人博客</a></p>
+<p><a href="https://blog.olowolo.com/post/hugo-quick-start/">Even作者的个人博客</a></p>
 </li>
 <li>
 <p><a href="https://www.jianshu.com/p/q81RER">献给写作者的 Markdown 新手指南</a></p>
@@ -293,7 +322,7 @@ git push -u origin master
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2020-03-06
+        2020-08-16
         
     </span>
   </p>

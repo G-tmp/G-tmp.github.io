@@ -6,7 +6,7 @@
     <description>Recent content on XD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Mar 2020 17:43:19 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2020 21:24:31 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,12 +14,19 @@
     <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+      <description>Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Ajax upload file and submit form data with Spring MVC</title>
+      <link>http://localhost:1313/post/ajax-upload-file-and-submit-data-with-springmvc/</link>
+      <pubDate>Sun, 16 Aug 2020 21:24:31 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/ajax-upload-file-and-submit-data-with-springmvc/</guid>
+      <description>需要在一个表单中上传图片和提交表单数据，页面会有一些提示信息，不想让服务器端跳转 form.jsp 1 2 3 4 5 &amp;lt;form id=&amp;#34;submit_form&amp;#34;&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; id=&amp;#34;name&amp;#34;&amp;gt;&amp;lt;br&amp;gt; &amp;lt;input type=&amp;#34;file&amp;#34; id=&amp;#34;selectImg&amp;#34;&amp;gt;&amp;lt;br&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; id=&amp;#34;submit_btn&amp;#34;&amp;gt; &amp;lt;/form&amp;gt; javascript 1 2 3 4 5 6 7 8 9 10 11</description>
     </item>
     
     <item>

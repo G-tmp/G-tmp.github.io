@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java web on XD</title>
+    <link>http://localhost:1313/tags/java-web/</link>
+    <description>Recent content in java web on XD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 16 Aug 2020 21:24:31 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/java-web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ajax upload file and submit form data with Spring MVC</title>
+      <link>http://localhost:1313/post/ajax-upload-file-and-submit-data-with-springmvc/</link>
+      <pubDate>Sun, 16 Aug 2020 21:24:31 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/ajax-upload-file-and-submit-data-with-springmvc/</guid>
+      <description>需要在一个表单中上传图片和提交表单数据，页面会有一些提示信息，不想让服务器端跳转 form.jsp 1 2 3 4 5 &amp;lt;form id=&amp;#34;submit_form&amp;#34;&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; id=&amp;#34;name&amp;#34;&amp;gt;&amp;lt;br&amp;gt; &amp;lt;input type=&amp;#34;file&amp;#34; id=&amp;#34;selectImg&amp;#34;&amp;gt;&amp;lt;br&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; id=&amp;#34;submit_btn&amp;#34;&amp;gt; &amp;lt;/form&amp;gt; javascript 1 2 3 4 5 6 7 8 9 10 11</description>
+    </item>
+    
+  </channel>
+</rss>
