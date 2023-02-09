@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Install and config Sway - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="G-tmp" /><meta name="description" content="Sway is very smooth but unstable compare to X11 DE like xfce4. Sometimes clash when high CPU usage, and not react to key events. And incompatible with native X11 applications, use them through XWayland.
+Install 1 2 3 4 sudo pacman -S sway swaybg swayidle swaylock xorg-xwayland \ xorg-xlsclients qt5-wayland glfw-wayland sudo pacman -S waybar wofi kanshi grim	# optional Shell scripts ~/Shell/
+screenshot.sh 1 2 #!/bin/sh grim -g &amp;#34;$(slurp)&amp;#34; &amp;#34;$HOME/Pictures/$(date &#43;&amp;#39;Screenshot_%F_%T&amp;#39;)." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/install-and-config-sway/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Install and config Sway" />
+<meta property="og:description" content="Sway is very smooth but unstable compare to X11 DE like xfce4. Sometimes clash when high CPU usage, and not react to key events. And incompatible with native X11 applications, use them through XWayland.
+Install 1 2 3 4 sudo pacman -S sway swaybg swayidle swaylock xorg-xwayland \ xorg-xlsclients qt5-wayland glfw-wayland sudo pacman -S waybar wofi kanshi grim	# optional Shell scripts ~/Shell/
+screenshot.sh 1 2 #!/bin/sh grim -g &#34;$(slurp)&#34; &#34;$HOME/Pictures/$(date &#43;&#39;Screenshot_%F_%T&#39;)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/install-and-config-sway/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-10-17T00:00:00+08:00" />
+<meta property="article:modified_time" content="2023-02-09T00:00:00+08:00" />
+<meta itemprop="name" content="Install and config Sway">
+<meta itemprop="description" content="Sway is very smooth but unstable compare to X11 DE like xfce4. Sometimes clash when high CPU usage, and not react to key events. And incompatible with native X11 applications, use them through XWayland.
+Install 1 2 3 4 sudo pacman -S sway swaybg swayidle swaylock xorg-xwayland \ xorg-xlsclients qt5-wayland glfw-wayland sudo pacman -S waybar wofi kanshi grim	# optional Shell scripts ~/Shell/
+screenshot.sh 1 2 #!/bin/sh grim -g &#34;$(slurp)&#34; &#34;$HOME/Pictures/$(date &#43;&#39;Screenshot_%F_%T&#39;)."><meta itemprop="datePublished" content="2022-10-17T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2023-02-09T00:00:00+08:00" />
+<meta itemprop="wordCount" content="2062">
+<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install and config Sway"/>
+<meta name="twitter:description" content="Sway is very smooth but unstable compare to X11 DE like xfce4. Sometimes clash when high CPU usage, and not react to key events. And incompatible with native X11 applications, use them through XWayland.
+Install 1 2 3 4 sudo pacman -S sway swaybg swayidle swaylock xorg-xwayland \ xorg-xlsclients qt5-wayland glfw-wayland sudo pacman -S waybar wofi kanshi grim	# optional Shell scripts ~/Shell/
+screenshot.sh 1 2 #!/bin/sh grim -g &#34;$(slurp)&#34; &#34;$HOME/Pictures/$(date &#43;&#39;Screenshot_%F_%T&#39;)."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">XD</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">XD</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Install and config Sway</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-10-17 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#shell-scripts">Shell scripts</a></li>
+        <li><a href="#config">Config</a>
+          <ul>
+            <li><a href="#sway">sway</a></li>
+            <li><a href="#waybar">waybar</a></li>
+            <li><a href="#kanshi">kanshi</a></li>
+          </ul>
+        </li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Sway is very smooth but unstable compare to X11 DE like xfce4. Sometimes clash when high CPU usage, and not react to key events. And incompatible with native X11 applications, use them through XWayland.</p>
+<h2 id="install">Install</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo pacman -S sway swaybg swayidle swaylock xorg-xwayland \
+</span></span><span class="line"><span class="cl"> xorg-xlsclients qt5-wayland glfw-wayland
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">sudo pacman -S waybar wofi kanshi grim	# optional
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="shell-scripts">Shell scripts</h2>
+<p><em>~/Shell/</em></p>
+<ul>
+<li>screenshot.sh</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>grim -g <span class="s2">&#34;</span><span class="k">$(</span>slurp<span class="k">)</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/Pictures/</span><span class="k">$(</span>date +<span class="s1">&#39;Screenshot_%F_%T&#39;</span><span class="k">)</span><span class="s2">.png&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>lock.sh</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>swayidle <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    timeout <span class="m">1</span> <span class="s1">&#39;swaymsg &#34;output * dpms off&#34;&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    resume <span class="s1">&#39;swaymsg &#34;output * dpms on&#34;&#39;</span> <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">swaylock -c <span class="m">000000</span>
+</span></span><span class="line"><span class="cl"><span class="nb">kill</span> %%
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="config">Config</h2>
+<h3 id="sway">sway</h3>
+<p><em>~/.config/sway/</em></p>
+<ul>
+<li>config</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Default config for sway
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Copy this to ~/.config/sway/config and edit it to your liking.
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Read `man 5 sway` for a complete reference.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># windows inner gap
+</span></span><span class="line"><span class="cl">gaps inner 8
+</span></span><span class="line"><span class="cl">gaps outer 2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#default_border pixel 2 # disable window titlebar
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># launch on start
+</span></span><span class="line"><span class="cl">exec_always fcitx5 -d --replace
+</span></span><span class="line"><span class="cl">exec_always swaymsg input 2:7:SynPS/2_Synaptics_TouchPad events disabled 
+</span></span><span class="line"><span class="cl">exec_always kanshi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">### Variables
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Logo key. Use Mod1 for Alt.
+</span></span><span class="line"><span class="cl">set $mod Mod1
+</span></span><span class="line"><span class="cl"># Home row direction keys, like vim
+</span></span><span class="line"><span class="cl">set $left h
+</span></span><span class="line"><span class="cl">set $down j
+</span></span><span class="line"><span class="cl">set $up k
+</span></span><span class="line"><span class="cl">set $right l
+</span></span><span class="line"><span class="cl"># Your preferred terminal emulator
+</span></span><span class="line"><span class="cl">set $term kitty -1
+</span></span><span class="line"><span class="cl"># Your preferred application launcher
+</span></span><span class="line"><span class="cl"># Note: pass the final command to swaymsg so that the resulting window can be opened
+</span></span><span class="line"><span class="cl"># on the original workspace that the command was run on.
+</span></span><span class="line"><span class="cl">#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+</span></span><span class="line"><span class="cl">set $menu wofi --show run
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">### Output configuration
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+</span></span><span class="line"><span class="cl">output &#34;*&#34; bg ~/Pictures/rio_046rio0164_1.png fill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Example configuration:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># You can get the names of your outputs by running: swaymsg -t get_outputs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">### Idle configuration
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Example configuration:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">#exec swayidle -w \
+</span></span><span class="line"><span class="cl">#         timeout 3600 &#39;swaylock -f -c 000000&#39; \
+</span></span><span class="line"><span class="cl">#         timeout 3630 &#39;swaymsg &#34;output * dpms off&#34;&#39; \
+</span></span><span class="line"><span class="cl">#         resume &#39;swaymsg &#34;output * #dpms on&#34;&#39; \
+</span></span><span class="line"><span class="cl">#         before-sleep &#39;swaylock -f -c 000000&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># This will lock your screen after 600 seconds of inactivity, then turn off
+</span></span><span class="line"><span class="cl"># your displays after another 60 seconds, and turn your screens back on when
+</span></span><span class="line"><span class="cl"># resumed. It will also lock your screen before your computer goes to sleep.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">### Input configuration
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Example configuration:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">#   input &#34;2:14:SynPS/2_Synaptics_TouchPad&#34; {
+</span></span><span class="line"><span class="cl">#       dwt enabled
+</span></span><span class="line"><span class="cl">#       tap enabled
+</span></span><span class="line"><span class="cl">#       natural_scroll enabled
+</span></span><span class="line"><span class="cl">#       middle_emulation enabled
+</span></span><span class="line"><span class="cl">#   }
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># You can get the names of your inputs by running: swaymsg -t get_inputs
+</span></span><span class="line"><span class="cl"># Read `man 5 sway-input` for more information about this section.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">### Key bindings
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Basics:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">    # Start a terminal
+</span></span><span class="line"><span class="cl">    bindsym $mod+Return exec $term
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Kill focused window
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+q kill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Start your launcher
+</span></span><span class="line"><span class="cl">    bindsym $mod+d exec $menu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Drag floating windows by holding down $mod and left mouse button.
+</span></span><span class="line"><span class="cl">    # Resize them with right mouse button + $mod.
+</span></span><span class="line"><span class="cl">    # Despite the name, also works for non-floating windows.
+</span></span><span class="line"><span class="cl">    # Change normal to inverse to use left mouse button for resizing and right
+</span></span><span class="line"><span class="cl">    # mouse button for dragging.
+</span></span><span class="line"><span class="cl">    floating_modifier $mod normal
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Reload the configuration file
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+c reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Exit sway (logs you out of your Wayland session)
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+e exec swaynag -t warning -m &#39;You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.&#39; -B &#39;Yes, exit sway&#39; &#39;swaymsg exit&#39;
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Moving around:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">    # Move your focus around
+</span></span><span class="line"><span class="cl">    bindsym $mod+$left focus left
+</span></span><span class="line"><span class="cl">    bindsym $mod+$down focus down
+</span></span><span class="line"><span class="cl">    bindsym $mod+$up focus up
+</span></span><span class="line"><span class="cl">    bindsym $mod+$right focus right
+</span></span><span class="line"><span class="cl">    # Or use $mod+[up|down|left|right]
+</span></span><span class="line"><span class="cl">    bindsym $mod+Left focus left
+</span></span><span class="line"><span class="cl">    bindsym $mod+Down focus down
+</span></span><span class="line"><span class="cl">    bindsym $mod+Up focus up
+</span></span><span class="line"><span class="cl">    bindsym $mod+Right focus right
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Move the focused window with the same, but add Shift
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+$left move left
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+$down move down
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+$up move up
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+$right move right
+</span></span><span class="line"><span class="cl">    # Ditto, with arrow keys
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+Left move left
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+Down move down
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+Up move up
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+Right move right
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Workspaces:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">    # Switch to workspace
+</span></span><span class="line"><span class="cl">    bindsym $mod+1 workspace number 1
+</span></span><span class="line"><span class="cl">    bindsym $mod+2 workspace number 2
+</span></span><span class="line"><span class="cl">    bindsym $mod+3 workspace number 3
+</span></span><span class="line"><span class="cl">    bindsym $mod+4 workspace number 4
+</span></span><span class="line"><span class="cl">    bindsym $mod+5 workspace number 5
+</span></span><span class="line"><span class="cl">    bindsym $mod+6 workspace number 6
+</span></span><span class="line"><span class="cl">    bindsym $mod+7 workspace number 7
+</span></span><span class="line"><span class="cl">    bindsym $mod+8 workspace number 8
+</span></span><span class="line"><span class="cl">    bindsym $mod+9 workspace number 9
+</span></span><span class="line"><span class="cl">    bindsym $mod+0 workspace number 10
+</span></span><span class="line"><span class="cl">    # Move focused container to workspace
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+1 move container to workspace number 1
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+2 move container to workspace number 2
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+3 move container to workspace number 3
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+4 move container to workspace number 4
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+5 move container to workspace number 5
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+6 move container to workspace number 6
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+7 move container to workspace number 7
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+8 move container to workspace number 8
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+9 move container to workspace number 9
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+0 move container to workspace number 10
+</span></span><span class="line"><span class="cl">    # Note: workspaces can have any name you want, not just numbers.
+</span></span><span class="line"><span class="cl">    # We just use 1-10 as the default.
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Custom keybindings
+</span></span><span class="line"><span class="cl">#    
+</span></span><span class="line"><span class="cl">	bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+</span></span><span class="line"><span class="cl">    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +3%
+</span></span><span class="line"><span class="cl">    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -3% 		# no max volume limit
+</span></span><span class="line"><span class="cl">	bindsym $mod+Ctrl+l exec ~/Shell/lock.sh
+</span></span><span class="line"><span class="cl">	bindsym Print exec ~/Shell/screenshot.sh
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Layout stuff:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">    # You can &#34;split&#34; the current object of your focus with
+</span></span><span class="line"><span class="cl">    # $mod+b or $mod+v, for horizontal and vertical splits
+</span></span><span class="line"><span class="cl">    # respectively.
+</span></span><span class="line"><span class="cl">    bindsym $mod+b splith
+</span></span><span class="line"><span class="cl">    bindsym $mod+v splitv
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Switch the current container between different layout styles
+</span></span><span class="line"><span class="cl">    bindsym $mod+s layout stacking
+</span></span><span class="line"><span class="cl">    bindsym $mod+w layout tabbed
+</span></span><span class="line"><span class="cl">    bindsym $mod+e layout toggle split
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Make the current focus fullscreen
+</span></span><span class="line"><span class="cl">    bindsym $mod+f fullscreen
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Toggle the current focus between tiling and floating mode
+</span></span><span class="line"><span class="cl">    bindsym $mod+Shift+space floating toggle
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Swap focus between the tiling area and the floating area
+</span></span><span class="line"><span class="cl">    bindsym $mod+space focus mode_toggle
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Move focus to the parent container
+</span></span><span class="line"><span class="cl">    bindsym $mod+a focus parent
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Scratchpad:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Show the next scratchpad window or hide the focused scratchpad window.
+</span></span><span class="line"><span class="cl">    # If there are multiple scratchpad windows, this command cycles through them.
+</span></span><span class="line"><span class="cl">    bindsym $mod+minus scratchpad show
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Resizing containers:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">mode &#34;resize&#34; {
+</span></span><span class="line"><span class="cl">    # left will shrink the containers widt
+</span></span><span class="line"><span class="cl">    # right will grow the containers width
+</span></span><span class="line"><span class="cl">    # up will shrink the containers height
+</span></span><span class="line"><span class="cl">    # down will grow the containers height
+</span></span><span class="line"><span class="cl">    bindsym $left resize shrink width 10px
+</span></span><span class="line"><span class="cl">    bindsym $down resize grow height 10px
+</span></span><span class="line"><span class="cl">    bindsym $up resize shrink height 10px
+</span></span><span class="line"><span class="cl">    bindsym $right resize grow width 10px
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Ditto, with arrow keys
+</span></span><span class="line"><span class="cl">    bindsym Left resize shrink width 10px
+</span></span><span class="line"><span class="cl">    bindsym Down resize grow height 10px
+</span></span><span class="line"><span class="cl">    bindsym Up resize shrink height 10px
+</span></span><span class="line"><span class="cl">    bindsym Right resize grow width 10px
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Return to default mode
+</span></span><span class="line"><span class="cl">    bindsym Return mode &#34;default&#34;
+</span></span><span class="line"><span class="cl">    bindsym Escape mode &#34;default&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">bindsym $mod+r mode &#34;resize&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Status Bar:
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Read `man 5 sway-bar` for more information about this section.
+</span></span><span class="line"><span class="cl">bar {
+</span></span><span class="line"><span class="cl">    swaybar_command waybar
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">include /etc/sway/config.d/*
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="waybar">waybar</h3>
+<p><em>~/.config/waybar/</em></p>
+<ul>
+<li>config</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;layer&#34;: &#34;top&#34;, // Waybar at top layer
+</span></span><span class="line"><span class="cl">    &#34;position&#34;: &#34;top&#34;, // Waybar at the bottom of your screen
+</span></span><span class="line"><span class="cl">    &#34;height&#34;: 24, // Waybar height
+</span></span><span class="line"><span class="cl">    // &#34;width&#34;: 1366, // Waybar width
+</span></span><span class="line"><span class="cl">    // Choose the order of the modules
+</span></span><span class="line"><span class="cl">    &#34;modules-left&#34;: [&#34;sway/workspaces&#34;, &#34;sway/mode&#34;],
+</span></span><span class="line"><span class="cl">    &#34;modules-center&#34;: [&#34;clock&#34;],
+</span></span><span class="line"><span class="cl">    &#34;modules-right&#34;: [&#34;tray&#34;, &#34;pulseaudio&#34;, &#34;network&#34;, &#34;cpu&#34;, &#34;memory&#34;, &#34;battery&#34;],
+</span></span><span class="line"><span class="cl">    &#34;sway/workspaces&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;disable-scroll&#34;: true,
+</span></span><span class="line"><span class="cl">        &#34;all-outputs&#34;: false,
+</span></span><span class="line"><span class="cl">        &#34;format&#34;: &#34;{icon}&#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-icons&#34;: {
+</span></span><span class="line"><span class="cl">            &#34;1:web&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;2:code&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;3:term&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;4:work&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;5:music&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;6:docs&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;urgent&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;focused&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;default&#34;: &#34;&#34;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#34;sway/mode&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;format&#34;: &#34;&lt;span style=\&#34;italic\&#34;&gt;{}&lt;/span&gt;&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#34;tray&#34;: {
+</span></span><span class="line"><span class="cl">        // &#34;icon-size&#34;: 21,
+</span></span><span class="line"><span class="cl">        &#34;spacing&#34;: 10
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#34;clock&#34;: {
+</span></span><span class="line"><span class="cl">     	&#34;tooltip-format&#34;: &#34;&lt;big&gt;{:%Y %B}&lt;/big&gt;\n&lt;tt&gt;&lt;small&gt;{calendar}&lt;/small&gt;&lt;/tt&gt;&#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-alt&#34;: &#34;{:%Y-%m-%d}&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#34;cpu&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;format&#34;: &#34;{usage}% &#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#34;memory&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;format&#34;: &#34;{}% &#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">     &#34;battery&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;states&#34;: {
+</span></span><span class="line"><span class="cl">            // &#34;good&#34;: 95,
+</span></span><span class="line"><span class="cl">            &#34;warning&#34;: 30,
+</span></span><span class="line"><span class="cl">            &#34;critical&#34;: 15
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        &#34;format&#34;: &#34;{capacity}% {icon}&#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-charging&#34;: &#34;{capacity}% &#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-plugged&#34;: &#34;{capacity}% &#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-alt&#34;: &#34;{time} {icon}&#34;,
+</span></span><span class="line"><span class="cl">        // &#34;format-good&#34;: &#34;&#34;, // An empty format will hide the module
+</span></span><span class="line"><span class="cl">        // &#34;format-full&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-icons&#34;: [&#34;&#34;, &#34;&#34;, &#34;&#34;, &#34;&#34;, &#34;&#34;]
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;battery#bat2&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;bat&#34;: &#34;BAT2&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#34;network&#34;: {
+</span></span><span class="line"><span class="cl">        // &#34;interface&#34;: &#34;wlp2*&#34;, // (Optional) To force the use of this interface
+</span></span><span class="line"><span class="cl">        &#34;format-wifi&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-ethernet&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">        &#34;tooltip-format&#34;: &#34;{ifname} via {gwaddr} &#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-linked&#34;: &#34;{ifname} (No IP) &#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-disconnected&#34;: &#34;⚠&#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-alt&#34;: &#34;{ifname}: {ipaddr}/{cidr}&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#34;pulseaudio&#34;: {
+</span></span><span class="line"><span class="cl">        //&#34;scroll-step&#34;: 1,
+</span></span><span class="line"><span class="cl">        &#34;format&#34;: &#34;{volume}% {icon}&#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-bluetooth&#34;: &#34;{volume}% {icon}&#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-muted&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">        &#34;format-icons&#34;: {
+</span></span><span class="line"><span class="cl">            &#34;headphones&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;handsfree&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;headset&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;phone&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;portable&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;car&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;default&#34;: [&#34;&#34;, &#34;&#34;]
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        &#34;on-click&#34;: &#34;pavucontrol&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    &#34;custom/spotify&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;format&#34;: &#34; {}&#34;,
+</span></span><span class="line"><span class="cl">        &#34;max-length&#34;: 40,
+</span></span><span class="line"><span class="cl">        &#34;interval&#34;: 30, // Remove this if your script is endless and write in loop
+</span></span><span class="line"><span class="cl">        &#34;exec&#34;: &#34;$HOME/.config/waybar/mediaplayer.sh 2&gt; /dev/null&#34;, // Script in resources folder
+</span></span><span class="line"><span class="cl">        &#34;exec-if&#34;: &#34;pgrep spotify&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>style.css</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">* {
+</span></span><span class="line"><span class="cl">    border: none;
+</span></span><span class="line"><span class="cl">    border-radius: 0;
+</span></span><span class="line"><span class="cl">    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+</span></span><span class="line"><span class="cl">    font-size: 16px;
+</span></span><span class="line"><span class="cl">    min-height: 0;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">window#waybar {
+</span></span><span class="line"><span class="cl">    background-color: rgba(43, 48, 59, 0.5);
+</span></span><span class="line"><span class="cl">    color: #ffffff;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#window,
+</span></span><span class="line"><span class="cl">#workspaces {
+</span></span><span class="line"><span class="cl">	padding: 2px 4px;
+</span></span><span class="line"><span class="cl">    margin: 2px 4px;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#workspaces button {
+</span></span><span class="line"><span class="cl">    background: transparent;
+</span></span><span class="line"><span class="cl">    color: #ffffff;
+</span></span><span class="line"><span class="cl">    border-bottom: 3px solid transparent;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#workspaces button.focused {
+</span></span><span class="line"><span class="cl">    color: #f19591;
+</span></span><span class="line"><span class="cl">    border-bottom: 3px solid #f19591;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#mode {
+</span></span><span class="line"><span class="cl">    background: #64727D;
+</span></span><span class="line"><span class="cl">    border-bottom: 3px solid #ffffff;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#clock,
+</span></span><span class="line"><span class="cl">#battery, 
+</span></span><span class="line"><span class="cl">#cpu, 
+</span></span><span class="line"><span class="cl">#memory, 
+</span></span><span class="line"><span class="cl">#network, 
+</span></span><span class="line"><span class="cl">#pulseaudio, 
+</span></span><span class="line"><span class="cl">#custom-spotify, 
+</span></span><span class="line"><span class="cl">#tray, 
+</span></span><span class="line"><span class="cl">#mode {
+</span></span><span class="line"><span class="cl">    padding: 2px 2px;
+</span></span><span class="line"><span class="cl">    margin: 2px 8px;
+</span></span><span class="line"><span class="cl">    color: #ffffff;
+</span></span><span class="line"><span class="cl">    border: none;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#clock {
+</span></span><span class="line"><span class="cl">    font-weight: bold;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#battery {
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#battery icon {
+</span></span><span class="line"><span class="cl">    color: red;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#battery.charging {
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@keyframes blink {
+</span></span><span class="line"><span class="cl">    to {
+</span></span><span class="line"><span class="cl">        background-color: #ffffff;
+</span></span><span class="line"><span class="cl">        color: black;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#battery.warning:not(.charging) {
+</span></span><span class="line"><span class="cl">    color: white;
+</span></span><span class="line"><span class="cl">    animation-name: blink;
+</span></span><span class="line"><span class="cl">    animation-duration: 0.5s;
+</span></span><span class="line"><span class="cl">    animation-timing-function: linear;
+</span></span><span class="line"><span class="cl">    animation-iteration-count: infinite;
+</span></span><span class="line"><span class="cl">    animation-direction: alternate;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#cpu {
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#memory {
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#network {
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#network.disconnected {
+</span></span><span class="line"><span class="cl">    background: #f53c3c;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#pulseaudio {
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#pulseaudio.muted {
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#custom-spotify {
+</span></span><span class="line"><span class="cl">    color: rgb(102, 220, 105);
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#tray {
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="kanshi">kanshi</h3>
+<p>external monitors</p>
+<p><em>~/.config/kanshi/</em></p>
+<ul>
+<li>config</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">profile {
+</span></span><span class="line"><span class="cl">	output HDMI-A-1 enable position 0,0
+</span></span><span class="line"><span class="cl">	output eDP-1 disable
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">profile {
+</span></span><span class="line"><span class="cl">	output eDP-1 enable position 0,0
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="references">References</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/sway">https://wiki.archlinux.org/title/sway</a></li>
+<li><a href="https://www.fosskers.ca/en/blog/wayland">Full Wayland Setup on Arch Linux</a></li>
+<li><a href="https://www.youtube.com/watch?v=hRIGYUWQfYU">Sway on Arch Linux: Installation and Configuration</a></li>
+<li><a href="https://www.youtube.com/watch?v=oUpvtCEGrxQ">Waybar customization on Sway WM (Arch Linux)</a></li>
+<li><a href="https://www.reddit.com/r/swaywm/comments/pidm1f/reenabling_laptop_screen_on_undock_with_kanshi/">Re-enabling laptop screen on undock with kanshi</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">G-tmp</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2023-02-09
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">MIT</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">Linux</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/config-arch-linux/">
+            <span class="next-text nav-default">Config Arch Linux</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/G-tmp" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

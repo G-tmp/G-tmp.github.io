@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 17 Oct 2022 00:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install and config Sway</title>
+      <link>http://localhost:1313/post/install-and-config-sway/</link>
+      <pubDate>Mon, 17 Oct 2022 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/install-and-config-sway/</guid>
+      <description>Sway is very smooth but unstable compare to X11 DE like xfce4. Sometimes clash when high CPU usage, and not react to key events. And incompatible with native X11 applications, use them through XWayland.
+Install 1 2 3 4 sudo pacman -S sway swaybg swayidle swaylock xorg-xwayland \ xorg-xlsclients qt5-wayland glfw-wayland sudo pacman -S waybar wofi kanshi grim	# optional Shell scripts ~/Shell/
+screenshot.sh 1 2 #!/bin/sh grim -g &amp;#34;$(slurp)&amp;#34; &amp;#34;$HOME/Pictures/$(date +&amp;#39;Screenshot_%F_%T&amp;#39;).</description>
+    </item>
+    
+    <item>
+      <title>Config Arch Linux</title>
+      <link>http://localhost:1313/post/config-arch-linux/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/config-arch-linux/</guid>
+      <description>Install Arch linux tutorial https://wiki.archlinux.org/title/installation_guide and https://archlinuxstudio.github.io/ArchLinuxTutorial/
+Nessary programs DE Sway or xorg xfce4 xfce4-goodies
+1 2 3 sudo pacman -S clash git firefox kitty thunar gedit unzip zip \ eog easytag keepassxc mpv openjdk11-src yt-dlp neofetch \ transmission-gtk mpd ncmpcpp gimp mariadb Manual install: IntelliJ IDEA
+kitty ~/.config/kitty/kitty.conf
+1 2 3 foreground #c5c8c6 background #1d1f21 enable_audio_bell no mpd ~/.config/mpd/mpd.conf
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 db_file	&amp;#34;~/.</description>
+    </item>
+    
+    <item>
+      <title>Build Blog on github pages</title>
+      <link>http://localhost:1313/post/build-blog/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/build-blog/</guid>
+      <description>May 2022 reinstalled OS forgot to backup blog and lost all data, so i remove former articles except this
+Install hugo pacman -S hugo or download from https://github.com/gohugoio/hugo/releases
+Initialization and replace theme 1 2 3 4 hugo new site {Blog} cd Blog git clone https://github.com/olOwOlo/hugo-theme-even themes/even cp -r ~/Blog/themes/even/exampleSite/* ~/Blog	modify ~/Blog/config.toml
+Test 1 cd ~/Blog &amp;amp;&amp;amp; hugo server Publish 1 cd ~/Blog &amp;amp;&amp;amp; hugo will generate static files in public, then push them to github</description>
+    </item>
+    
+  </channel>
+</rss>
