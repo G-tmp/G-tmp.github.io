@@ -130,9 +130,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Sway is very smooth but unstable compare to X11 DE like xfce4. Sometimes clash when high CPU usage, and not react to key events. And incompatible with native X11 applications, use them through XWayland.
-Install 1 2 3 4 sudo pacman -S sway swaybg swayidle swaylock xorg-xwayland \ xorg-xlsclients qt5-wayland glfw-wayland sudo pacman -S waybar wofi kanshi grim	# optional Shell scripts ~/Shell/
-screenshot.sh 1 2 #!/bin/sh grim -g &#34;$(slurp)&#34; &#34;$HOME/Pictures/$(date +&#39;Screenshot_%F_%T&#39;).
+      Sway is very smooth but unstable compare to X11 DE like xfce4, it fixed screen tearing problem. It is annoying that Sometimes clash when high CPU usage, and not react to key events. And incompatible with native X11 applications, use them through XWayland.
+Install 1 2 3 4 sudo pacman -S sway waybar swaybg swayidle swaylock xorg-xwayland \ xorg-xlsclients qt5-wayland glfw-wayland sudo pacman -S wofi kanshi grim	# optional Shell scripts ~/Shell/screenshot.
     </div>
     <div class="read-more">
       <a href="/post/install-and-config-sway/" class="read-more-link">Read more...</a>
@@ -152,11 +151,9 @@ screenshot.sh 1 2 #!/bin/sh grim -g &#34;$(slurp)&#34; &#34;$HOME/Pictures/$(dat
   <div class="post-content">
     <div class="post-summary">
       Install Arch linux tutorial https://wiki.archlinux.org/title/installation_guide and https://archlinuxstudio.github.io/ArchLinuxTutorial/
-Nessary programs DE Sway or xorg xfce4 xfce4-goodies
-1 2 3 sudo pacman -S clash git firefox kitty thunar gedit unzip zip \ eog easytag keepassxc mpv openjdk11-src yt-dlp neofetch \ transmission-gtk mpd ncmpcpp gimp mariadb Manual install: IntelliJ IDEA
-kitty ~/.config/kitty/kitty.conf
-1 2 3 foreground #c5c8c6 background #1d1f21 enable_audio_bell no mpd ~/.config/mpd/mpd.conf
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 db_file	&#34;~/.
+Nessary applications DE Sway or xorg xfce4 xfce4-goodies
+1 2 3 sudo pacman -S clash git firefox kitty thunar gedit unzip zip \ eog easytag keepassxc mpv openjdk11-src yt-dlp neofetch \ transmission-gtk mpd ncmpcpp gimp mariadb Manual install: lscolors, IntelliJ IDEA
+kitty ~/.config/kitty/kitty.conf 1 2 3 foreground #c5c8c6 background #1d1f21 enable_audio_bell no mpd ~/.config/mpd/mpd.conf 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 db_file	&#34;~/.
     </div>
     <div class="read-more">
       <a href="/post/config-arch-linux/" class="read-more-link">Read more...</a>
